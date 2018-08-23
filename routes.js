@@ -3,11 +3,11 @@ let express = require('express')
 let router = express.Router()
 
 router.get('/', (req,res) => {
-        res.render('home')
+        res.render('./partials/welcome')
 })
 
 router.get('/sudoku', (req,res) => {
-        res.render('sudoku')
+        res.render('./partials/sudoku')
 })
 
 module.exports = router
