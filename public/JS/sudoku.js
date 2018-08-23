@@ -87,6 +87,7 @@ function easySudokuCheck(){
         }
     }
     // User wins
+    prompt("Congraturation")
     console.log("YAY U WIN")
     return true;
 }
