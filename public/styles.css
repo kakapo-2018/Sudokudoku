@@ -1,3 +1,9 @@
-#board div {
+#board div{
     float:right; 
+}
+
+input {
+    float:right; 
+    text-align:center;
+    font-size:35px;
 }
