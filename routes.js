@@ -1,15 +1,13 @@
 
 let express = require('express')
-let server = express()
+let router = express.Router()
 
-server.get('/', (req,res)=>{
-    res.render('index')
-
+router.get('/', (req,res) => {
+        res.render('home')
 })
 
-server.get('/sudoku', (req,res)=>{
-
-    res.render('partials/sudoku')
+router.get('/sudoku', (req,res) => {
+        res.render('sudoku')
 })
 
-module.exports = server
+module.exports = router
