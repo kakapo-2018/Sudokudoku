@@ -28,31 +28,26 @@ function createBoard () {
         board[r].push(0)
       }
     }
-    displayBoard(board);
+    displayBoard();
 }
 
-function displayBoard (board) {
-    let squareSize = 48;
 
-    // Set board size
+
+function displayBoard (board) {
+
+    let squareSize = 48;
     let boardWidth = ((squareSize * 9) + (9 * 2))  + "px";
     document.getElementById("board").style.width = boardWidth;
 
-    for (var i = 0; i < 9; i++) {
-        for (var j = 0; j < 9; j++) {
-
+    // Set board size
+    for (var row = 0; row < 9; row++) {
+        for (var col = 0; col < 9; col++) {
+            
             // Create a square
             var input = document.createElement("input");
-            input.id = "r" + i + "c" + j;
-            input.style.width = squareSize + "px";
-            input.style.height = squareSize + "px";
-            input.style.border = "solid";
-            input.style.borderWidth = "1px"
-            input.style.borderColor = "black"
-            input.style.background = "white"
             input.maxLength = "1"
 
-            // Add square to board
+            // Add square to board 
             document.getElementById("board").appendChild(input);
         }
     }
