@@ -39,7 +39,7 @@ body  {
   padding-bottom: 10px;    
 }
 
-.button {
+#button {
   font-weight: bold;      
   color: #9D8851;   
   width: 50px; 
@@ -51,14 +51,14 @@ body  {
   left: -10px;
 }
 
-.button:hover {
+#button:hover {
   border-bottom: 3px solid #615E3F;
   transition: 0.5s;
   color: #fff;
   text-shadow: 1px 1px #8B864E;
 } 
 
-.board  {
+#board  {
   background-color: gold;
   width: 500px;
   height:500px;

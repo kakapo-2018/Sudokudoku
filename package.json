@@ -1,20 +1,19 @@
 {
-  "name": "Sudokudoku",
+  "name": "sudokudoku",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "knex": "knex",
-    "dev": "nodemon index",
-    "start": "node index"
-  },
-  "repository": "https://github.com/kakapo-2018/Sudokudoku",
-  "author": "<yuzuki.sadoh@gmail.com>",
+  "repository": "https://github.com/kakapo-2018/Sudokudoku.git",
+  "author": "WinstonItiDev <winstonshred@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index"
+  },
   "dependencies": {
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
-    "knex": "^0.15.2",
-    "nodemon": "^1.18.3",
-    "sqlite3": "^4.0.2"
+    "knex": "^0.15.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
   }
 }
