@@ -1,7 +1,7 @@
-const express = require('express'),
-  hbs = require('express-handlebars'),
-  routes = require('./routes'),
-  server = express();
+const express = require('express')
+const hbs = require('express-handlebars')
+const routes = require('./routes')
+const server = express()
 
 // Middleware
 server.engine('hbs', hbs({
