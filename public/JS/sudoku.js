@@ -12,28 +12,17 @@ let easySodokuAnswer = [
     [5,9,4,3,6,2,7,1,8]
 ]
 
-let htmlBoard = []
-
-
-
-
 function startGame(){
     createBoard()
 }
 
 function createBoard () {
-    board = easySodokuAnswer;
-
+    var board = easySodokuAnswer;
     displayBoard(board);
 }
 
-
-
 function displayBoard (board) {
-
-    let squareSize = 48;
-
-    // Set board size
+     // Set board size
     for (var row = 0; row < 9; row++) {
         for (var col = 0; col < 9; col++) {
                  
