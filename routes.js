@@ -1,9 +1,14 @@
 
 let express = require('express')
-let server = express()
+let router = express.Router()
 
-server.get('/', (req,res)=>{
-    res.send("Sudokudoku!!!")
+router.get('/', (req,res) => {
+    let num = 0
+    if(num === 0) {
+        res.render('home')
+    } else {
+        res.render('sudoku')
+    } 
 })
 
-module.exports = server
+module.exports = router
