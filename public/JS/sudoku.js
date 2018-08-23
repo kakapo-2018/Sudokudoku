@@ -12,17 +12,33 @@ let easySodokuAnswer = [
     [5,9,4,3,6,2,7,1,8]
 ]
 
+var board = []
+
+
+
+
 function startGame(){
     createBoard()
 }
 
 function createBoard () {
-    var board = easySodokuAnswer;
+    board = []
+    for(let r=0; r <9; r++){
+    board.push([])
+    for(let c=0; c<9; c++){
+    board[r].push(0)
+    }
+    }
     displayBoard(board);
 }
 
+
+
 function displayBoard (board) {
-     // Set board size
+
+ 
+
+    // Set board size
     for (var row = 0; row < 9; row++) {
         for (var col = 0; col < 9; col++) {
                  
@@ -35,9 +51,12 @@ function displayBoard (board) {
                 input.style.color = "red";
 
             } else {
-                input.value = board[row][col]
+                board[row][col] = easySodokuAnswer[row][col]
+                input.value = easySodokuAnswer[row][col]
                 input.readOnly = true;
             }
+
+            addListener(input, row, col);
 
             // Add square to board 
             document.getElementById("board").appendChild(input);
@@ -46,19 +65,29 @@ function displayBoard (board) {
     }
 }
 
+function addListener(input, row, col){
+    input.addEventListener("input", function(){
+        board[row][col] = input.value
+    });
+}
 
 
 
-function easySudokuCheck(board){
+
+
+function easySudokuCheck(){
+    
+    
     for (var row = 0; row < 9; row++) {
         for (var col = 0; col < 9; col++) {
-            if(board[row][col] !== easySodokuAnswer[row][col]){
+            if(board[row][col] != easySodokuAnswer[row][col]){
                 // User does not win
-                return false;
+                return false
             }         
         }
     }
     // User wins
+    console.log("YAY U WIN")
     return true;
 }
 
@@ -69,6 +98,7 @@ function timer(){
 
 setInterval(() => {
     timer();
+    easySudokuCheck();
 
 
    // console.log(time)
