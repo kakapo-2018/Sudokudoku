@@ -1,0 +1,12 @@
+input {
+    text-align:center;
+    font-size:35px;
+    width: 48px;
+    height: 48px;
+    border-width: 1px;
+    border-color: black;
+}
+
+#board {
+    width: 480px; 
+}
