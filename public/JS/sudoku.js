@@ -12,6 +12,8 @@ let easySodokuAnswer = [
     [5,9,4,3,6,2,7,1,8]
 ]
 
+let htmlBoard = []
+
 
 
 
@@ -20,15 +22,9 @@ function startGame(){
 }
 
 function createBoard () {
-    let size = 9;
-    let board = []
-    for(let r=0; r <size; r++){
-      board.push([])
-      for(let c=0; c<size; c++){
-        board[r].push(0)
-      }
-    }
-    displayBoard();
+    board = easySodokuAnswer;
+
+    displayBoard(board);
 }
 
 
@@ -36,27 +32,56 @@ function createBoard () {
 function displayBoard (board) {
 
     let squareSize = 48;
-    let boardWidth = ((squareSize * 9) + (9 * 2))  + "px";
-    document.getElementById("board").style.width = boardWidth;
 
     // Set board size
     for (var row = 0; row < 9; row++) {
         for (var col = 0; col < 9; col++) {
-            
+                 
             // Create a square
             var input = document.createElement("input");
             input.maxLength = "1"
+ 
+            if(Math.floor(Math.random() * 10) > 6){ 
+                board[row][col] = ""
+                input.style.color = "red";
+
+            } else {
+                input.value = board[row][col]
+                input.readOnly = true;
+            }
 
             // Add square to board 
             document.getElementById("board").appendChild(input);
-        }
-    }
-}
-
-function easySudoku(){
-    for (var i = 0; i < 9; i++) {
-        for (var j = 0; j < 9; j++) {
             
         }
     }
 }
+
+
+
+
+function easySudokuCheck(board){
+    for (var row = 0; row < 9; row++) {
+        for (var col = 0; col < 9; col++) {
+            if(board[row][col] !== easySodokuAnswer[row][col]){
+                // User does not win
+                return false;
+            }         
+        }
+    }
+    // User wins
+    return true;
+}
+
+let time = 0;
+function timer(){
+    return time++;
+}
+
+setInterval(() => {
+    timer();
+
+
+   // console.log(time)
+    
+}, 10000 / 10)
