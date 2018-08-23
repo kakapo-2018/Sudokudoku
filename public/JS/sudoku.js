@@ -46,7 +46,7 @@ function displayBoard (board) {
             var input = document.createElement("input");
             input.maxLength = "1"
  
-            if(Math.floor(Math.random() * 10) > 6){ 
+            if(Math.floor(Math.random() * 10) > 9){ 
                 board[row][col] = ""
                 input.style.color = "red";
 
@@ -87,21 +87,19 @@ function easySudokuCheck(){
         }
     }
     // User wins
-    prompt("Congraturation")
+    prompt("Congratulations! Please enter your name")
     console.log("YAY U WIN")
     return true;
 }
 
 let time = 0;
 function timer(){
-    return time++;
+    time++
+    let sw = document.getElementById("stopwatch")
+    sw.innerHTML = time
 }
 
 setInterval(() => {
     timer();
     easySudokuCheck();
-
-
-   // console.log(time)
-    
-}, 10000 / 10)
+}, 1000)
