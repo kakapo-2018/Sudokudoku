@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', startGame)
 
+
 let sudokuAnswer = [[
     [8,4,6,9,3,7,1,5,2],
     [3,1,9,6,2,5,8,4,7],
@@ -64,7 +65,7 @@ let answerBoard = null
 
 
 
-function startGame(){
+function startGame(level){
     createBoard()
 }
 
@@ -86,7 +87,7 @@ function createBoard () {
 
 
 function displayEasyBoard (board) {
-
+    console.log("EasyBOARD!")
     // Set board size
     for (var row = 0; row < 9; row++) {
         for (var col = 0; col < 9; col++) {
@@ -96,7 +97,7 @@ function displayEasyBoard (board) {
             input.maxLength = "1"
             
  
-            if(Math.floor(Math.random() * 10) > 4){ 
+            if(Math.floor(Math.random() * 10) > 8){ 
                 board[row][col] = ""
                 input.style.color = "red";
 
@@ -185,17 +186,18 @@ function addListener(input, row, col){
 
 
 function easySudokuCheck(){
-    
+
     
     for (var row = 0; row < 9; row++) {
         for (var col = 0; col < 9; col++) {
-            if(board[row][col] != sudokuAnswer[row][col]){
+            if(board[row][col] != answerBoard[row][col]){
                 // User does not win
                 return false
             }         
         }
     }
-    // User wins
+    // User win
+    prompt("Congratulations! Please enter your name")
     console.log("YAY U WIN")
     return true;
 }
@@ -212,6 +214,7 @@ setInterval(() => {
     easySudokuCheck();
 
 
-   // console.log(time)
+//    console.log(time)
     
 }, 1000)
+

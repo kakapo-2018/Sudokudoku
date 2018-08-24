@@ -112,6 +112,23 @@ body  {
     /* padding: 10px; */
   }
 
+#watch {
+  color: white;
+  padding: 0% 50%;
+  margin-right: 60px;
+  font-size: 30px;
+  float: right;
+}
+
+  #stopwatch {
+    color: white;
+    padding: 0% 50%;
+    margin-right: 60px;
+    font-size: 30px;
+    float: right;
+    text-decoration: underline;
+  }
+
   button {
     font-weight: bold;      
     color: #9D8851;

@@ -7,6 +7,7 @@ router.get('/', (req,res) => {
 })
 
 router.get('/sudoku-beginner', (req,res) => {
+        // displayEasyBoard()
         res.render('./partials/sudoku')
 })
 
@@ -15,6 +16,7 @@ router.get('/sudoku-intermediate', (req,res) => {
 })
 
 router.get('/sudoku-advanced', (req,res) => {
+
         res.render('./partials/sudoku')
 })
 
