@@ -6,12 +6,15 @@
   "author": "WinstonItiDev <winstonshred@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index"
+    "knex": "knex",
+    "dev": "nodemon index",
+    "start": "node index"
   },
   "dependencies": {
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
-    "knex": "^0.15.2"
+    "knex": "^0.15.2",
+    "sqlite3": "^4.0.2"
   },
   "devDependencies": {
     "nodemon": "^1.18.3"
