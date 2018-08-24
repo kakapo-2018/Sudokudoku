@@ -7,15 +7,39 @@ input {
     border-color: black;
 }
 
-#board {
-    width: 480px; 
+.container {
+    /* margin: 0 auto; */
+    margin: auto;
+    width: 50%;
+    bottom: 100px;
+    align-content: center;
+    padding: 10px;
 }
 
-/* body  {
+.header-div {
+    margin: auto;
+    width: 15%;
+    height: 140px;
+    /* align-content: center; */
+    padding: 10px;
+}
+
+.button-container {
+    margin: auto;
+    width: 25%;
+    align-content: center;
+    padding: 10px;
+    display: flex;
+}
+
+/* #board {
+    width: 480px; 
+} */
+
+body  {
     font: 12px "sans-serif", Arial, Helvetica;
-    background-image: url https://previews.123rf.com/images/sanek13744/sanek137441705/sanek13744170500084/77600409-sudoku-game-with-answer-vector-puzzle-game-with-numbers-for-kids-and-adults-illustration-on-white-ba.jpg/
-  } */
-/* 
+    background-image: url('http://architectureimg.com/wp-content/uploads/2016/11/monuments-samurai-sudoku-desktop-wallpapers.jpg')
+  }
   .sudokucreate {
     margin: 20px;
     color:white;    
@@ -55,14 +79,22 @@ input {
   
   #button {
     font-weight: bold;      
-    color: #9D8851;   
-    width: 50px; 
-    margin: 0 15px 0 5px;
-    text-align: center;
-    padding: 5px;
-    border-bottom: 3px solid #8B864E;
+    color: #9D8851;
+    margin: auto;
+    /* width: 50%; */
+    padding: 10px;   
+    /* width: 50px;  */
+    /* margin: 0 15px 0 5px; */
+    /* text-align: center; */
+    /* padding: 5px; */
+    /* border-bottom: 3px solid #8B864E;
     position: relative;
-    left: -10px;
+    left: -10px; */
+
+    /* margin: auto;
+    width: 50%; */
+    /* border: 3px solid green; */
+    /* padding: 10px; */
   }
   
   #button:hover {
@@ -70,15 +102,20 @@ input {
     transition: 0.5s;
     color: #fff;
     text-shadow: 1px 1px #8B864E;
-  }  */
+  } 
   
-  /* #board  {
-    background-color: gold;
+  #board  {
+    /* background-color: gold; */
     width: 480px;
     height:480px;
-  } */
+    margin: auto;
+    /* width: 50%; */
+    align-content: center;
+    /* border: 3px solid green; */
+    /* padding: 10px; */
+  }
   
-  /* #back {
+  #back {
     margin: 20px 20px 20px 100px;
     background: #FEF0DB;
     width: auto; 
@@ -90,10 +127,11 @@ input {
   }
   
   
-  title {
+  h1 {
     text-align: center;
     background: #FEF0DB; 
     padding-bottom: 30px; 
+    padding-top: 30px; 
     border-radius: 5px;
     border:1px #8B864E solid; 
     color: #fff; 
@@ -102,5 +140,6 @@ input {
     height: 40px;
     margin: 20px;
     float: left;
-  } */
+  }
+  
   

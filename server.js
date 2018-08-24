@@ -14,7 +14,7 @@ server.engine('hbs', hbs(hbsConfig))
 server.set('view engine', 'hbs')
 
 server.use(express.urlencoded({extended:false}))
-server.use(express.static(path.join(__dirname, '')))
+// server.use(express.static(path.join(__dirname, '')))
 server.use(express.static(path.join(__dirname, 'public')))
 server.use('/', routes)
 
