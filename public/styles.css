@@ -10,3 +10,9 @@ input {
 #board {
     width: 480px; 
 }
+
+#stopwatch {
+    font-size: 60px;
+    padding:10%;
+    text-decoration: underline;
+}
